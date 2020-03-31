@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>An Intelligent and Automated PDF Format Checker</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="../static/css/default.css" th:href="@{/css/default.css}" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+	        	<span class="icon icon-cog"></span>
+				<h2>Automated PDF Format Checker</h2>
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="index.html" accesskey="1" title="">HOME</a></li>
+					<li><a href="manual.html" accesskey="2" title="">USER MANUAL</a></li>
+					<li class="active"><a href="#" accesskey="3" title="">CHECK</a></li>
+					<li><a href="about.html" accesskey="4" title="">ABOUT</a></li>
+					<li><a href="contact.html" accesskey="5" title="">CONTACT</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper">
+
+			<!-- here is the page you access after whole checking process -->
+			<p><br/>Click the following link to download checked files:</p>
+		    <a th:href="@{${fileInfo.zipPath}}">Download</a>
+
+	</div>
+</body>
+</html>
+
+<!-- 			<p th:text="'Paper Type: ' + ${fileInfo.paperType}" />
+		    <p th:text="'File Name: ' + ${fileInfo.fileName}" />
+		    <p th:text="'File Abs Path: ' + ${fileInfo.absPath}" />
+		    <p th:text="'File Zip Path: ' + ${fileInfo.zipPath}" /> -->

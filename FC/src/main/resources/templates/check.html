@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>An Intelligent and Automated PDF Format Checker</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="../static/css/default.css" th:href="@{/css/default.css}" rel="stylesheet" />
+</head>
+<body>
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+	        	<span class="icon icon-cog"></span>
+				<h2>Automated PDF Format Checker</h2>
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="index.html" accesskey="1" title="">HOME</a></li>
+					<li><a href="manual.html" accesskey="2" title="">USER MANUAL</a></li>
+					<li class="active"><a href="#" accesskey="3" title="">CHECK</a></li>
+					<li><a href="about.html" accesskey="4" title="">ABOUT</a></li>
+					<li><a href="contact.html" accesskey="5" title="">CONTACT</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="wrapper">
+	
+		<div id="banner" class="container"></div>
+		
+		<div id="welcome" class="container">
+	    	
+			<div class="title">
+				  <p>Check</p>
+			</div>
+			
+			<div>
+				<form method="POST" enctype="multipart/form-data" action="/upload_ok">
+					<table>
+						<tr>
+							<td><input type="file" name="file"/></td>
+							<td><input type="submit" value="Upload" class="button1"/></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			
+		</div>
+		
+		
+		<div id="three-column" class="container">
+
+		</div>
+	</div>
+	
+	
+<div id="copyright">
+	<p>| Tsaihsuan Yang | All rights reserved</p>
+</div>
+</body>
+</html>

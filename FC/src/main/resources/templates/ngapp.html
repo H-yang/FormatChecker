@@ -1,0 +1,47 @@
+<html ng-app="searchApp">
+	<!-- This page uses AngularJS -->
+	<head>
+	    <title>::SEARCH::</title>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	    <script src="/js/search-control.js"></script>
+	    <link rel="stylesheet" type="text/css" href="/css/style.css">
+	</head>
+
+
+	<body ng-controller="UserCtrl">
+	    <div>
+
+	    		<p>{{pageContent.countryName}}</p>
+		    	<p>{{pageContent.pageTitle}}</p>
+	            <p>{{pageContent.description}}</p>
+	            <img src={{pageContent.picUrl}}></img>
+
+
+				<p>{{pageContent.sectionTitle}}</p>
+	            <div ng-repeat="todo in pageContent.thingsToDo">
+					<a href = {{todo.url}}> {{todo.activity}} </a>
+				</div>
+
+
+	            <div ng-repeat="restaurant in pageContent.restaurants">
+	            	<a href = {{restaurant.url}}> {{restaurant.name}} </a>
+				</div>
+
+
+	            <div ng-repeat="place in pageContent.places">
+	            	<a href = {{place.url}}> {{place.name}} </a>
+				</div>
+	            <div ng-repeat="Event in pageContent.places">
+								<a href = {{event.url}}> {{event.name}} </a>	
+				</div>
+				
+				<p>::Page source::</p>
+				<a href = {{pageContent.tripAdvisorUrl}}> TripAdvisor | </a>
+				<a href = {{pageContent.wikiTravelUrl}}> WikiTravel</a>
+
+
+	    </div>
+
+	</body>
+
+</html>
